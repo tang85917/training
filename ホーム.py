@@ -44,4 +44,4 @@ st.map(df)
 
 st.markdown(":red[【注意事項】]")
 st.markdown(":red[ここはシステム開発者の教育用ダッシュボードです]")
-st.markdown(":red[そのため、使用するデータは全て架空のデータです。]")
+st.markdown(":red[そのため、使用するデータは全て架空のデータです]")

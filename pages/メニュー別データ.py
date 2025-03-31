@@ -154,4 +154,4 @@ with st.form(key='メニュー別フォーム'):
 
 st.markdown(":red[今回は練習用にデータベースの代わりにtxtファイルを使用しています]")
 st.markdown(":red[また今回はコメント登録後の取り消し機能も実装していません]")
-st.markdown(":red[txtファイルを直接編集することは可能です。]")
+st.markdown(":red[txtファイルを直接編集することは可能です]")
