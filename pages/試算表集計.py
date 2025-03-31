@@ -17,7 +17,7 @@ epd3.write('前年度のものは、別途、経理部にご確認ください�
 
 st.write('「利益金処分計算書」「付属明細表」は必要に応じて経理部にご確認ください。')
 
-image=Image.open("../data/financial_statements.png")
+image=Image.open("./data/financial_statements.png")
 st.image(image)
 
 #損益計算書

@@ -74,10 +74,10 @@ with st.form(key='月次コメント'):
     submit_btn=st.form_submit_button('Submit')
 
     if submit_btn:
-        with open("../data/coment.txt","w") as f:
+        with open("./data/coment.txt","w") as f:
             f.write(f"{coment}\n")
     
-    with open("../data/coment.txt","r",encoding='shift-jis') as f:
+    with open("./data/coment.txt","r",encoding='shift-jis') as f:
         select_coment=f.read()
         st.write(select_coment)
 #注意書き
