@@ -1,6 +1,7 @@
 import streamlit as st
+import pandas as pd
 
-st.markdown(" ### 売上分析ダッシュボード")
+st.title("売上分析ダッシュボード")
 
 st.caption("このダッシュボードでは月次データとメニュー別の売り上げ数をインタラクティブに確認できます")
 
@@ -29,6 +30,17 @@ expander4.write('''
                 TEL: 03-xxxx-xxx1（経理部）\n
                 TEL: 03-xxxx-xxx2（経営企画部）
                 ''')
+
+st.subheader("本社所在地：品川シーサイド")
+
+data = {
+    'latitude': [35.6097],  # 品川シーサイドの緯度
+    'longitude': [139.7400]  # 品川シーサイドの経度
+}
+df = pd.DataFrame(data)
+
+# 地図を表示
+st.map(df)
 
 st.markdown(":red[【注意事項】]")
 st.markdown(":red[ここはシステム開発者の教育用ダッシュボードです]")
