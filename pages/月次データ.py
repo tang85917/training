@@ -4,12 +4,9 @@ import altair as alt
 
 st.title("月次データ")
 
-def show():
-    st.write("月次データ")
-
 #ドリンクの月次データ
 def drink_monthly_data():
-    drink_data=pd.read_excel('../data/2022sales_data.xlsx',
+    drink_data=pd.read_excel('./data/2022sales_data.xlsx',
                         sheet_name='drink',index_col=0)
     month_drink=st.selectbox("月を選んでください",drink_data.columns,key='drink')
 
@@ -30,7 +27,7 @@ if st.checkbox('ドリンク'):
 
 #肉の月次データ
 def meat_monthly_data():
-    meat_data=pd.read_excel('../data/2022sales_data.xlsx',
+    meat_data=pd.read_excel('./data/2022sales_data.xlsx',
                             sheet_name='meat',index_col=0)
     
     month_meat=st.selectbox("月を選んでください",meat_data.columns,key='meat')
@@ -51,7 +48,7 @@ if st.checkbox('肉'):
 
 #サイドメニューの月次データ
 def side_monthly_data():
-    side_data=pd.read_excel('../data/2022sales_data.xlsx',
+    side_data=pd.read_excel('./data/2022sales_data.xlsx',
                             sheet_name='sidemenu',index_col=0)
     
     month_side=st.selectbox("月を選んでください",side_data.columns,key="side")

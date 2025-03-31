@@ -1,7 +1,4 @@
 import streamlit as st
-import メニュー別データ
-import 月次データ
-import 試算表集計
 
 st.markdown(" ### 売上分析ダッシュボード")
 
@@ -36,14 +33,3 @@ expander4.write('''
 st.markdown(":red[【注意事項】]")
 st.markdown(":red[ここはシステム開発者の教育用ダッシュボードです]")
 st.markdown(":red[そのため、使用するデータは全て架空のデータです。]")
-
-pages=['ホーム','メニュー別データ','月次データ','試算表集計']
-with st.sidebar:
-    pages_radio=st.radio('ページ',pages,key='homeradio')
-
-if pages_radio=='メニュー別データ':
-    メニュー別データ.show()
-elif pages_radio=='月次データ':
-    月次データ.show()
-elif pages_radio=='試算表集計':
-    試算表集計.show()

@@ -2,14 +2,11 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
-def show():
-    st.write("メニュー別データ")
-
 st.title("品別売上")
 
 #ドリンクの品別売上
 def drink():
-    drink_data=pd.read_excel('../data/2022sales_data.xlsx',
+    drink_data=pd.read_excel('./data/2022sales_data.xlsx',
                             sheet_name='drink',index_col=0)
     drink_t=drink_data.T
 
@@ -28,7 +25,7 @@ def drink():
 
 #肉の品別売上
 def meat():
-    meat_data=pd.read_excel('../data/2022sales_data.xlsx',
+    meat_data=pd.read_excel('./data/2022sales_data.xlsx',
                             sheet_name='meat',index_col=0)
     meat_t=meat_data.T
 
@@ -47,7 +44,7 @@ def meat():
 
 #サイドメニューの品別売上
 def side():
-    side_data=pd.read_excel('../data/2022sales_data.xlsx',
+    side_data=pd.read_excel('./data/2022sales_data.xlsx',
                             sheet_name='sidemenu',index_col=0)
     side_t=side_data.T
 
@@ -66,7 +63,7 @@ def side():
 
 #ドリンクのマルチセレクト
 def drink_multi():
-    drink_data=pd.read_excel('../data/2022sales_data.xlsx',
+    drink_data=pd.read_excel('./data/2022sales_data.xlsx',
                             sheet_name='drink',index_col=0)
     drink_t=drink_data.T
 
@@ -85,7 +82,7 @@ def drink_multi():
 
 #肉のマルチセレクト
 def meat_multi():
-    meat_data=pd.read_excel('../data/2022sales_data.xlsx',
+    meat_data=pd.read_excel('./data/2022sales_data.xlsx',
                             sheet_name='meat',index_col=0)
     meat_t=meat_data.T
 
@@ -104,7 +101,7 @@ def meat_multi():
         
 #サイドメニューのマルチセレクト
 def side_multi():
-    side_data=pd.read_excel('../data/2022sales_data.xlsx',
+    side_data=pd.read_excel('./data/2022sales_data.xlsx',
                             sheet_name='sidemenu',index_col=0)
     side_t=side_data.T
 
@@ -148,10 +145,10 @@ with st.form(key='メニュー別フォーム'):
     submit_btn=st.form_submit_button("submit")
 
     if submit_btn:
-        with open("../data/coment.txt","w") as f:
+        with open("./data/coment.txt","w") as f:
             f.write(comment)
 
-    with open("../data/coment.txt","r",encoding='shift-jis') as f:
+    with open("./data/coment.txt","r",encoding='shift-jis') as f:
         comment1=f.read()
         comment1
 

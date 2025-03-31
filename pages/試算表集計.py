@@ -2,9 +2,6 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
-def show():
-    st.write("試算表集計")
-
 st.title('当社の財務分析方針')
 st.markdown(":blue[主に分析に使う財務諸表は以下の3つとします。]")
 
@@ -25,7 +22,7 @@ st.image(image)
 
 #損益計算書
 st.markdown("### 前年度の損益計算書")
-pl_data=pd.read_excel("../data/2022financial_data.xlsx",
+pl_data=pd.read_excel("./data/2022financial_data.xlsx",
                     index_col=0)
 st.dataframe(pl_data)
 
